@@ -1,0 +1,31 @@
+V6.7.19 Portable modification scope
+
+Portable/deployment additions:
+- machine profile for variable ROS/PX4/XTDrone/message-workspace/QGC/YOLO paths
+- auto PX4 competition launch discovery (official zhihang2026.launch, legacy zhihang20267.launch)
+- conda/venv/system/direct YOLO runtime abstraction
+- single/multi-GPU, CPU-validation and external-endpoint support
+- concurrent three-worker benchmark and runtime manifest export
+- terminal backend selection for desktop or tmux/headless computers
+- official competition message workspace sourcing and one-shot final result bridge
+- competition compliance/readiness diagnostics
+
+Core mission behavior retained:
+- v0/v1 dynamic-inspection center-to-outer routes and v2 east-west north-to-south manoeuvre route
+- first dynamic target assigned to manoeuvre aircraft; second to detecting free dynamic-inspection aircraft
+- remaining dynamic-inspection aircraft becomes static-search aircraft
+- 30 m dynamic FW-to-MC transition gate; approximately 40 m altitude retained until visual lock
+- 90 m equal-spacing square-spiral reacquisition at 6 m/s with tangent yaw
+- reliable cross-aircraft target-state injection and fast approach
+- five-second suv_camo motion validation and prius_hybrid_camo confusion firewall/rollback
+- static candidate grouping, sequential precise verification, rejection evidence and best final candidate
+- yaw-zero, 30 m, 5 m XY, 1 m Z, 3 s static hover verification
+- person_white 10 m west hover offset
+- HOLD/OFFBOARD recovery and invalid fixed-wing zero-setpoint guard
+- first-ARMED 32 minute search budget, 3 minute return reserve and independent landing
+- formal planning/control uses YOLO geolocation and aircraft state, not Gazebo target truth
+
+Protected official files are not modified:
+- XTDrone/communication/vtol_communication.py
+- XTDrone/communication/multi_vehicle_communication.sh
+- XTDrone/communication/multi_vehicle_commonication.sh

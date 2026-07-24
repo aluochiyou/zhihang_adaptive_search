@@ -1,0 +1,99 @@
+{
+  "version": "6.7.19",
+  "platform": {
+    "system": "Linux",
+    "release": "5.15.0-139-generic",
+    "machine": "x86_64",
+    "python": "3.8.10"
+  },
+  "detected": {
+    "workspace": "/home/uav/zhihang2026_ws",
+    "ros_setup": "/opt/ros/noetic/setup.bash",
+    "underlay": "/home/uav/catkin_ws/devel/.private/catkin_tools_prebuild/setup.bash",
+    "message_ws_setup": "/home/uav/zhihang_ws/devel/.private/catkin_tools_prebuild/setup.bash",
+    "xtdrone_root": "/home/uav/XTDrone",
+    "px4_root": "/home/uav/PX4_Firmware",
+    "qgc": "/home/uav/QGroundControl.AppImage",
+    "model": "/home/uav/zhihang_yolo26/weights/best.pt",
+    "conda": "/home/uav/anaconda3/condabin/conda",
+    "conda_envs": {
+      "anaconda3": "/home/uav/anaconda3",
+      "photodiff": "/home/uav/anaconda3/envs/photodiff",
+      "yolo": "/home/uav/anaconda3/envs/yolo",
+      "yolo26": "/home/uav/anaconda3/envs/yolo26"
+    },
+    "terminal_backend": "gnome-terminal",
+    "runtime": "conda",
+    "runtime_detail": "yolo26",
+    "python_probe": {
+      "ok": true,
+      "python": "/home/uav/anaconda3/envs/yolo26/bin/python",
+      "python_version": "3.10.20",
+      "numpy": "2.2.6",
+      "cv2": "5.0.0",
+      "torch": "2.6.0+cu124",
+      "ultralytics": "8.4.104",
+      "cuda_available": true,
+      "cuda_device_count": 2,
+      "cuda_version": "12.4",
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 2080 Ti",
+          "total_memory_gb": 10.74
+        },
+        {
+          "index": 1,
+          "name": "NVIDIA GeForce RTX 2080 Ti",
+          "total_memory_gb": 10.75
+        }
+      ]
+    }
+  },
+  "profile": {
+    "ZHIHANG_WS": "/home/uav/zhihang2026_ws",
+    "ZHIHANG_ROS_SETUP": "/opt/ros/noetic/setup.bash",
+    "ZHIHANG_OPTIONAL_UNDERLAY": "/home/uav/catkin_ws/devel/.private/catkin_tools_prebuild/setup.bash",
+    "ZHIHANG_MESSAGE_WS_SETUP": "/home/uav/zhihang_ws/devel/.private/catkin_tools_prebuild/setup.bash",
+    "ZHIHANG_XTDRONE_ROOT": "/home/uav/XTDrone",
+    "ZHIHANG_PX4_ROOT": "/home/uav/PX4_Firmware",
+    "ZHIHANG_PX4_ROS_PACKAGE": "px4",
+    "ZHIHANG_PX4_LAUNCH_FILE": "auto",
+    "ZHIHANG_PX4_LAUNCH_ARGS": "",
+    "ZHIHANG_PX4_ENV_SCRIPT": "",
+    "ZHIHANG_GUARD_ROS_PACKAGE": "zhihang_xtdrone_guard",
+    "ZHIHANG_GUARD_LAUNCH_FILE": "guard_standard_vtol.launch",
+    "ZHIHANG_COMMUNICATION_DIR": "/home/uav/XTDrone/communication",
+    "ZHIHANG_POSE_SCRIPT": "/home/uav/XTDrone/sensing/pose_ground_truth/get_multi_vehcle_local_pose.sh",
+    "ZHIHANG_MODEL_STATE_SCRIPT": "/home/uav/XTDrone/zhihang2026/model_state.py",
+    "ZHIHANG_COMPETITION_DATA_DIR": "/home/uav/XTDrone/zhihang2026",
+    "ZHIHANG_QGC_EXECUTABLE": "/home/uav/QGroundControl.AppImage",
+    "ZHIHANG_QGC_ARGS": "",
+    "ZHIHANG_START_QGC": "1",
+    "ZHIHANG_TERMINAL_BACKEND": "gnome-terminal",
+    "ZHIHANG_TMUX_SESSION": "zhihang_v6_7_19",
+    "ZHIHANG_HEADLESS": "0",
+    "ZHIHANG_YOLO_RUNTIME": "conda",
+    "ZHIHANG_YOLO_ENV": "yolo26",
+    "ZHIHANG_YOLO_VENV": "/home/uav/.venvs/yolo26",
+    "ZHIHANG_YOLO_PYTHON": "",
+    "ZHIHANG_YOLO_MODEL": "/home/uav/zhihang_yolo26/weights/best.pt",
+    "ZHIHANG_YOLO_REQUIRE_CUDA": "1",
+    "ZHIHANG_YOLO_DEVICES": "0,1,1",
+    "ZHIHANG_YOLO_QUANTIZE": "16",
+    "ZHIHANG_YOLO_ADAPTIVE": "1",
+    "ZHIHANG_YOLO_ADAPTIVE_SIZES": "640,512,416",
+    "ZHIHANG_YOLO_MINIMUM_FPS": "10.0",
+    "ZHIHANG_YOLO_CONFIDENCE": "0.25",
+    "ZHIHANG_YOLO_IOU": "0.7",
+    "ZHIHANG_YOLO_WARMUP_ITERATIONS": "3",
+    "ZHIHANG_YOLO_START_LOCAL_WORKERS": "1",
+    "ZHIHANG_YOLO_HOSTS": "127.0.0.1,127.0.0.1,127.0.0.1",
+    "ZHIHANG_YOLO_BIND_HOST": "127.0.0.1",
+    "ZHIHANG_YOLO_PORT_BASE": "17771",
+    "ZHIHANG_DEFAULT_SCENE": "scene_001_adaptive_v6_7_19_formal",
+    "ZHIHANG_DEFAULT_SEED": "-1",
+    "ZHIHANG_RECORD_BAG": "1"
+  },
+  "warnings": []
+}

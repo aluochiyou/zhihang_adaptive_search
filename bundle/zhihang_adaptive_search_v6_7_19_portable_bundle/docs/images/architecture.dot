@@ -1,0 +1,55 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad=0.25, nodesep=0.35, ranksep=0.52, fontname="Noto Sans CJK SC", fontsize=16, label="V6.7.19 跨电脑部署与三机任务架构", labelloc=t];
+  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=11, color="#4b5563", fillcolor="#f8fafc", margin="0.14,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=9, color="#64748b", arrowsize=0.75];
+
+  subgraph cluster_official {
+    label="赛事官方环境（保持原文件与启动步骤）"; color="#94a3b8"; style="rounded,dashed";
+    px4 [label="PX4 SITL + Gazebo\n3× standard_vtol"];
+    xt [label="XTDrone 原始通信\nmulti_vehicle_commonication.sh"];
+    pose [label="位姿与相机话题\nMAVROS / camera/image_raw"];
+    msg [label="zhihang_ws 自定义消息\n官方静/动态结果话题"];
+    motion [label="model_state.py\n目标运动"];
+    px4 -> xt -> pose;
+  }
+
+  subgraph cluster_portable {
+    label="V6.7.19 Portable 适配层"; color="#2563eb"; style="rounded";
+    profile [label="machine_profile.env\n路径/终端/GPU/YOLO/端口", fillcolor="#dbeafe"];
+    env [label="ROS overlay loader\nNoetic + underlay + zhihang_ws + 算法WS", fillcolor="#dbeafe"];
+    term [label="终端后端\ngnome-terminal / xterm / konsole / tmux", fillcolor="#dbeafe"];
+    runtime [label="YOLO运行时抽象\nconda / venv / system / direct", fillcolor="#dbeafe"];
+    doctor [label="Doctor + readiness + benchmark\n模型类别/FPS/CUDA/话题检查", fillcolor="#dbeafe"];
+    profile -> env; profile -> term; profile -> runtime; doctor -> profile [style=dashed];
+  }
+
+  subgraph cluster_app {
+    label="自主任务应用层（正式模式不以Gazebo目标真值参与规划/控制）"; color="#16a34a"; style="rounded";
+    mgr [label="mission_manager.py\n任务规划/角色分配/计时/候选管理", fillcolor="#dcfce7"];
+    est [label="vision_target_state_estimator.py\n多机视觉动态目标状态融合", fillcolor="#dcfce7"];
+    flt [label="3× vehicle_flight_agent.py\nOffboard/VTOL转换/跟踪/返航", fillcolor="#dcfce7"];
+    per [label="3× vehicle_perception_agent.py\n图像传输/定位/证据保存", fillcolor="#dcfce7"];
+    yolo [label="3× yolo26_single_worker.py\n独立真实YOLO推理", fillcolor="#dcfce7"];
+    bridge [label="competition_result_publisher.py\n一次性最终官方话题桥接", fillcolor="#dcfce7"];
+    mgr -> flt [label="任务/角色/目标"];
+    flt -> mgr [label="状态/事件/结果"];
+    per -> mgr [label="检测/定位报告"];
+    per -> est [label="视觉定位流"];
+    est -> mgr [label="动态目标滤波状态"];
+    yolo -> per [label="TCP检测结果"];
+    mgr -> bridge [label="最终静态+动态端点JSON"];
+  }
+
+  subgraph cluster_output {
+    label="提交与复盘输出"; color="#f59e0b"; style="rounded";
+    bag [label="score1.bag\n官方9个话题", fillcolor="#fef3c7"];
+    topics [label="官方话题\nstatic_targets/pose\ndynamic_targets/pose", fillcolor="#fef3c7"];
+    evidence [label="原始/标注图、JSONL、轨迹、评估、态势图", fillcolor="#fef3c7"];
+  }
+
+  pose -> flt; pose -> per;
+  runtime -> yolo; term -> mgr; env -> mgr; env -> flt; env -> per;
+  motion -> mgr [label="仅启动屏障，不作为正式规划真值", style=dashed];
+  msg -> bridge;
+  pose -> bag; motion -> bag; bridge -> bag; bridge -> topics; mgr -> evidence; per -> evidence;
+}

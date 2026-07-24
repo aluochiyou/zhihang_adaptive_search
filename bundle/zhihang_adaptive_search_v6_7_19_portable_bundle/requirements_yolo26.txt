@@ -1,0 +1,6 @@
+# Install through setup_yolo_runtime.sh.
+# PyTorch is intentionally handled separately because the correct wheel depends
+# on the computer's CUDA driver/runtime or CPU-only requirement.
+-r requirements_yolo26_core.txt
+torch
+torchvision

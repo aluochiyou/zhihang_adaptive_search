@@ -1,0 +1,3298 @@
+{
+  "2": {
+    "schema_version": 6,
+    "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+    "vehicle_id": 2,
+    "ok": true,
+    "error": "",
+    "events": {
+      "READY": 1761.914,
+      "ASSIGNMENT_RECEIVED": 3661.479,
+      "TAKEOFF_START": 2025.111,
+      "ARMED": 2029.778,
+      "TAKEOFF_10M_COMPLETE": 2036.486,
+      "TRANSITION_FW_COMPLETE": 3665.377,
+      "SEARCH_START": 2039.364,
+      "TRACK_FW_30M_TRANSITION_GATE_REACHED": 2670.286,
+      "TRACK_TARGET_HANDOFF_ACQUIRED": 2670.288,
+      "TRANSITION_MC_COMPLETE": 3707.549,
+      "TRACK_MC_ALTITUDE_HOLD_CAPTURED": 2676.761,
+      "DYNAMIC_TARGET_MOTION_CONFIRMED": 2677.764,
+      "TRACK_ALTITUDE_DESCENT_ENABLED": 2677.765,
+      "TRACK_TARGET_STREAM_STALE": 3383.434,
+      "TRACK_LOSS_CONTINUE_TO_LAST_KNOWN": 3383.436,
+      "TRACK_LAST_KNOWN_APPROACH_START": 3383.437,
+      "TRACK_LAST_KNOWN_POSITION_REACHED_CONTINUE_MOTION": 3388.108,
+      "TRACK_REACQUISITION_PASS_START": 3658.95,
+      "TRACK_TARGET_REACQUIRED": 3371.781,
+      "TRACK_TARGET_STREAM_REACQUIRED": 3371.782,
+      "TRACK_TARGET_REACQUIRED_EN_ROUTE": 2816.168,
+      "RETURN_START": 3661.51,
+      "RETURN_MODE_SELECTED": 3661.511,
+      "RETURN_FW_TRANSITION_COMPLETE": 3665.378,
+      "RETURN_FW_GATE_REACHED": 3700.978,
+      "RETURN_FW_BACK_TRANSITION_COMPLETE": 3707.55,
+      "AUTO_LAND_SENT": 3734.959,
+      "LANDED": 3751.765,
+      "DISARMED": 3752.78
+    },
+    "assignments": [
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 2,
+        "sequence": 1,
+        "mode": "SEARCH_STATIC_CENTER_OUT",
+        "functional_role": "MANEUVER_INSPECTION",
+        "route": {
+          "route_id": "maneuver_initial_east_west_north_to_south_then_square_outward",
+          "role": "MANEUVER_INSPECTION",
+          "functional_role": "MANEUVER_INSPECTION",
+          "vehicle_id": 2,
+          "altitude_m": 40.5,
+          "waypoints": [
+            {
+              "point": [
+                350.0,
+                650.0,
+                40.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_00",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                650.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_00",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                605.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_01",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                560.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_01",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                560.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_01",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                515.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_02",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                470.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_02",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                470.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_02",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                425.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_03",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                380.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_03",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                380.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_03",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                335.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_04",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                290.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_04",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                290.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_04",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                245.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_05",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                200.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_05",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                200.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_05",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                155.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_06",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                110.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_06",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                110.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_06",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                65.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_07",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                20.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_07",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                20.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_07",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                -24.999999999999993,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_08",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -70.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_08",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -70.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_08",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                -115.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_09",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -160.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_09",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -160.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_09",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                -205.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_10",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -250.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_10",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -250.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_10",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                -295.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_11",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -340.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_11",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -340.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_11",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                -385.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_12",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -430.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_12",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -430.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_12",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1695.0,
+                -475.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_13",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -520.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_13",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -520.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_13",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                395.0,
+                -565.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_14",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -610.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_14",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -610.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_14",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1670.0,
+                -630.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_15",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                1650.0,
+                -650.0,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_initial_north_to_south_row_15",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                350.0,
+                -650.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_initial_north_to_south_row_15",
+              "role": "MANEUVER_INSPECTION_INITIAL"
+            },
+            {
+              "point": [
+                260.0,
+                -740.0,
+                40.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring00_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                260.0,
+                740.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring00_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                271.7157287525381,
+                808.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring00_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1740.0,
+                740.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring00_side1",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1728.284271247462,
+                808.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring00_side1",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1740.0,
+                -740.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring00_side2",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1728.284271247462,
+                -808.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring00_side2",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                260.0,
+                -740.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring00_side3",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                170.0,
+                -830.0,
+                40.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring01_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                170.0,
+                830.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring01_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                181.7157287525381,
+                898.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring01_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1830.0,
+                830.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring01_side1",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1818.284271247462,
+                898.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring01_side1",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1830.0,
+                -830.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring01_side2",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1818.284271247462,
+                -898.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring01_side2",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                170.0,
+                -830.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring01_side3",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                100.0,
+                -900.0,
+                40.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring02_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                100.0,
+                900.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring02_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                111.7157287525381,
+                968.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring02_side0",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1900.0,
+                900.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring02_side1",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1888.284271247462,
+                968.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring02_side1",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1900.0,
+                -900.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring02_side2",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                1888.284271247462,
+                -968.2842712474619,
+                40.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "manoeuvre_square_outward_ring02_side2",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            },
+            {
+              "point": [
+                100.0,
+                -900.0,
+                40.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "manoeuvre_square_outward_ring02_side3",
+              "role": "MANEUVER_INSPECTION_OUTER_SQUARE"
+            }
+          ],
+          "initial_stage": {
+            "bounds": {
+              "x_min": 350.0,
+              "x_max": 1650.0,
+              "y_min": -650.0,
+              "y_max": 650.0
+            },
+            "lane_y": [
+              650.0,
+              560.0,
+              470.0,
+              380.0,
+              290.0,
+              200.0,
+              110.0,
+              20.0,
+              -70.0,
+              -160.0,
+              -250.0,
+              -340.0,
+              -430.0,
+              -520.0,
+              -610.0,
+              -650.0
+            ],
+            "legs": [
+              {
+                "index": 0,
+                "y": 650.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 1,
+                "y": 560.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 2,
+                "y": 470.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 3,
+                "y": 380.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 4,
+                "y": 290.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 5,
+                "y": 200.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 6,
+                "y": 110.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 7,
+                "y": 20.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 8,
+                "y": -70.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 9,
+                "y": -160.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 10,
+                "y": -250.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 11,
+                "y": -340.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 12,
+                "y": -430.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 13,
+                "y": -520.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              },
+              {
+                "index": 14,
+                "y": -610.0,
+                "x_start": 350.0,
+                "x_end": 1650.0,
+                "heading": "east"
+              },
+              {
+                "index": 15,
+                "y": -650.0,
+                "x_start": 1650.0,
+                "x_end": 350.0,
+                "heading": "west"
+              }
+            ],
+            "direction": "east_west_rows_ordered_north_to_south",
+            "orthogonal_to_dynamic_inspection_routes": true
+          },
+          "outer_square_stage": {
+            "rectangles": [
+              {
+                "ring": 0,
+                "x_min": 260.0,
+                "x_max": 1740.0,
+                "y_min": -740.0,
+                "y_max": 740.0
+              },
+              {
+                "ring": 1,
+                "x_min": 170.0,
+                "x_max": 1830.0,
+                "y_min": -830.0,
+                "y_max": 830.0
+              },
+              {
+                "ring": 2,
+                "x_min": 100.0,
+                "x_max": 1900.0,
+                "y_min": -900.0,
+                "y_max": 900.0
+              }
+            ],
+            "direction": "initial_boundary_to_distribution_boundary",
+            "inset_or_expansion_m": 90.0,
+            "corner_guide_samples": 1
+          },
+          "description": "manoeuvre-inspection aircraft first covers the entire initial region with east-west straight rows from north to south, orthogonal to the two dynamic-inspection aircraft; only then does it retain the existing nested-square outward continuation over the surrounding distribution area"
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "V6.7.19 manoeuvre-inspection v2: east-west rows from north to south over the initial region, then unchanged outward-square continuation at 40.5m",
+        "ros_time": 2013.074,
+        "wall_time": 1784865539.2882204
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 2,
+        "sequence": 2,
+        "mode": "TRACK_DYNAMIC",
+        "functional_role": "DYNAMIC_TRACKING",
+        "route": null,
+        "target_name": "suv_camo",
+        "target_estimate": {
+          "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+          "target_name": "suv_camo",
+          "position": [
+            599.7649865092625,
+            -2.8898706210346234,
+            0.20000000000000284
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_ros_time": 2657.473,
+          "manager_ros_time": 2657.52,
+          "source": "fov_detection_extrapolation",
+          "source_vehicle_id": 0,
+          "confidence": 0.7293294270833334,
+          "horizontal_std_m": 0.5492400047833307,
+          "external_injection_reliable": false
+        },
+        "static_targets": [],
+        "reason": "first dynamic target: manoeuvre-inspection aircraft becomes a dynamic tracker; suv_camo remains provisional until five-second motion validation succeeds",
+        "ros_time": 2657.52,
+        "wall_time": 1784866288.0443766,
+        "provisional_dynamic_target": true,
+        "motion_lock_required": true,
+        "dynamic_lock_confirmed": false,
+        "previous_functional_role": "MANEUVER_INSPECTION",
+        "previous_assignment_mode": "SEARCH_STATIC_CENTER_OUT"
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 2,
+        "sequence": 3,
+        "mode": "RETURN",
+        "functional_role": "DYNAMIC_TRACKING",
+        "route": null,
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "maximum 32-minute search budget reached from first ARMED; start fixed-wing independent return with best available result",
+        "ros_time": 3661.478,
+        "wall_time": 1784867466.33033
+      }
+    ],
+    "static_confirmed": [],
+    "tracking": {
+      "last": {
+        "tracking_points": 19,
+        "tracking_seconds": 1075.0140000000001
+      }
+    },
+    "phase": "DONE"
+  },
+  "1": {
+    "schema_version": 6,
+    "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+    "vehicle_id": 1,
+    "ok": true,
+    "error": "",
+    "events": {
+      "READY": 1759.27,
+      "ASSIGNMENT_RECEIVED": 3661.478,
+      "TAKEOFF_START": 2020.118,
+      "ARMED": 2024.189,
+      "TAKEOFF_10M_COMPLETE": 2030.991,
+      "TRANSITION_FW_COMPLETE": 3665.145,
+      "SEARCH_START": 2033.774,
+      "DYNAMIC_TARGET_MOTION_CONFIRMED": 2665.39,
+      "TRACK_FW_30M_TRANSITION_GATE_REACHED": 2667.596,
+      "TRACK_TARGET_HANDOFF_ACQUIRED": 2667.597,
+      "TRANSITION_MC_COMPLETE": 3743.987,
+      "TRACK_MC_ALTITUDE_HOLD_CAPTURED": 2675.744,
+      "RETURN_START": 3661.484,
+      "RETURN_MODE_SELECTED": 3661.485,
+      "RETURN_FW_TRANSITION_COMPLETE": 3665.146,
+      "RETURN_FW_GATE_REACHED": 3737.605,
+      "RETURN_FW_BACK_TRANSITION_COMPLETE": 3743.988,
+      "AUTO_LAND_SENT": 3771.614,
+      "LANDED": 3788.415,
+      "DISARMED": 3789.226
+    },
+    "assignments": [
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 1,
+        "sequence": 1,
+        "mode": "SEARCH_DYNAMIC_RIGHT",
+        "functional_role": "DYNAMIC_INSPECTION",
+        "route": {
+          "route_id": "dynamic_right_initial_inner_to_outer",
+          "role": "DYNAMIC_RIGHT_INITIAL",
+          "side": "right",
+          "vehicle_id": 1,
+          "altitude_m": 40.0,
+          "waypoints": [
+            {
+              "point": [
+                1025.0,
+                885.0,
+                40.0
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_00",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1025.0,
+                -885.0,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_00",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1025.0,
+                -886.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_00",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1070.0,
+                -931.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_00",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1115.0,
+                -886.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_00",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1115.0,
+                886.5,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_01",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1115.0,
+                888.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_01",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1160.0,
+                933.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_01",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1205.0,
+                888.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_01",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1205.0,
+                -888.0,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_02",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1205.0,
+                -889.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_02",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1250.0,
+                -934.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_02",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1295.0,
+                -889.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_02",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1295.0,
+                889.5,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_03",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1295.0,
+                891.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_03",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1340.0,
+                936.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_03",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1385.0,
+                891.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_03",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1385.0,
+                -891.0,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_04",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1385.0,
+                -892.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_04",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1430.0,
+                -937.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_04",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1475.0,
+                -892.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_04",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1475.0,
+                892.5,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_05",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1475.0,
+                894.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_05",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1520.0,
+                939.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_05",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1565.0,
+                894.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_05",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1565.0,
+                -894.0,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_06",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1565.0,
+                -895.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_06",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1610.0,
+                -940.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_06",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1655.0,
+                -895.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_06",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1655.0,
+                895.5,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_07",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1655.0,
+                897.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_07",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1700.0,
+                942.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_07",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1745.0,
+                897.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_07",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1745.0,
+                -897.0,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_08",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1745.0,
+                -898.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_08",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1790.0,
+                -943.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_08",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1835.0,
+                -898.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_08",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1835.0,
+                898.5,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_09",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1835.0,
+                900.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_09",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1867.5,
+                932.5,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_09",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1900.0,
+                900.0,
+                40.0
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "right_dynamic_initial_leg_09",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            },
+            {
+              "point": [
+                1900.0,
+                -900.0,
+                40.0
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "right_dynamic_initial_leg_10",
+              "role": "DYNAMIC_RIGHT_INITIAL"
+            }
+          ],
+          "lane_x": [
+            1025.0,
+            1115.0,
+            1205.0,
+            1295.0,
+            1385.0,
+            1475.0,
+            1565.0,
+            1655.0,
+            1745.0,
+            1835.0,
+            1900.0
+          ],
+          "lane_half_spans": [
+            885.0,
+            886.5,
+            888.0,
+            889.5,
+            891.0,
+            892.5,
+            894.0,
+            895.5,
+            897.0,
+            898.5,
+            900.0
+          ],
+          "inner_start_x_m": 1025.0,
+          "outer_limit_x_m": 1900.0,
+          "primary_high_risk_half_span_m": 850.0,
+          "distribution_half_span_m": 900.0,
+          "description": "inner shortest leg covers primary static-risk support; 90m outward lanes progressively cover the moving distribution region"
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "V6.7.19 dynamic-inspection v1: centre-to-right north-south coverage at 40.0m",
+        "ros_time": 2013.074,
+        "wall_time": 1784865539.287746
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 1,
+        "sequence": 2,
+        "mode": "TRACK_DYNAMIC",
+        "functional_role": "DYNAMIC_TRACKING",
+        "route": null,
+        "target_name": "person_red",
+        "target_estimate": {
+          "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+          "target_name": "person_red",
+          "position": [
+            1414.2680950462957,
+            -0.5053353216136334,
+            0.20000000000000526
+          ],
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_ros_time": 2665.307,
+          "manager_ros_time": 2665.38,
+          "source": "fov_detection_extrapolation",
+          "source_vehicle_id": 1,
+          "confidence": 0.7117513020833334,
+          "horizontal_std_m": 0.4404784634156413,
+          "external_injection_reliable": false
+        },
+        "static_targets": [],
+        "reason": "second dynamic target: detecting free dynamic-inspection aircraft becomes the second dynamic tracker",
+        "ros_time": 2665.38,
+        "wall_time": 1784866297.193572,
+        "provisional_dynamic_target": false,
+        "motion_lock_required": false,
+        "dynamic_lock_confirmed": true,
+        "previous_functional_role": "DYNAMIC_INSPECTION",
+        "previous_assignment_mode": "SEARCH_DYNAMIC_RIGHT"
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 1,
+        "sequence": 3,
+        "mode": "RETURN",
+        "functional_role": "DYNAMIC_TRACKING",
+        "route": null,
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "maximum 32-minute search budget reached from first ARMED; start fixed-wing independent return with best available result",
+        "ros_time": 3661.478,
+        "wall_time": 1784867466.330106
+      }
+    ],
+    "static_confirmed": [],
+    "tracking": {
+      "last": {
+        "tracking_points": 28078,
+        "tracking_seconds": 1112.48
+      }
+    },
+    "phase": "DONE"
+  },
+  "0": {
+    "schema_version": 6,
+    "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+    "vehicle_id": 0,
+    "ok": true,
+    "error": "",
+    "events": {
+      "READY": 1756.331,
+      "ASSIGNMENT_RECEIVED": 3661.478,
+      "TAKEOFF_START": 2015.121,
+      "ARMED": 2018.982,
+      "TAKEOFF_10M_COMPLETE": 2025.934,
+      "TRANSITION_FW_COMPLETE": 3662.596,
+      "SEARCH_START": 3433.161,
+      "ROUTE_COMPLETE": 3432.56,
+      "RETURN_START": 3661.491,
+      "RETURN_MODE_SELECTED": 3661.492,
+      "FW_ZERO_VELOCITY_HANDOVER_BLOCKED": 3661.744,
+      "RETURN_FW_TRANSITION_COMPLETE": 3662.597,
+      "RETURN_FW_FALLBACK_MC": 3790.584,
+      "TRANSITION_MC_COMPLETE": 3796.762,
+      "RETURN_MC_SEGMENT_REACHED": 4231.05,
+      "AUTO_LAND_SENT": 4266.327,
+      "LANDED": 4283.532,
+      "DISARMED": 4283.947
+    },
+    "assignments": [
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 1,
+        "mode": "SEARCH_DYNAMIC_LEFT",
+        "functional_role": "DYNAMIC_INSPECTION",
+        "route": {
+          "route_id": "dynamic_left_initial_inner_to_outer",
+          "role": "DYNAMIC_LEFT_INITIAL",
+          "side": "left",
+          "vehicle_id": 0,
+          "altitude_m": 39.5,
+          "waypoints": [
+            {
+              "point": [
+                975.0,
+                -885.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_00",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                975.0,
+                885.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_00",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                975.0,
+                886.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_00",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                930.0,
+                931.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_00",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                885.0,
+                886.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_00",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                885.0,
+                -886.5,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_01",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                885.0,
+                -888.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_01",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                840.0,
+                -933.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_01",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                795.0,
+                -888.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_01",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                795.0,
+                888.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_02",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                795.0,
+                889.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_02",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                750.0,
+                934.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_02",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                705.0,
+                889.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_02",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                705.0,
+                -889.5,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_03",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                705.0,
+                -891.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_03",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                660.0,
+                -936.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_03",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                615.0,
+                -891.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_03",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                615.0,
+                891.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_04",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                615.0,
+                892.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_04",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                570.0,
+                937.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_04",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                525.0,
+                892.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_04",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                525.0,
+                -892.5,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_05",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                525.0,
+                -894.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_05",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                480.0,
+                -939.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_05",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                435.0,
+                -894.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_05",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                435.0,
+                894.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_06",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                435.0,
+                895.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_06",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                390.0,
+                940.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_06",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                345.0,
+                895.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_06",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                345.0,
+                -895.5,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_07",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                345.0,
+                -897.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_07",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                300.0,
+                -942.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_07",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                255.0,
+                -897.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_07",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                255.0,
+                897.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_08",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                255.0,
+                898.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_08",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                210.0,
+                943.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_08",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                165.0,
+                898.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_08",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                165.0,
+                -898.5,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_09",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                165.0,
+                -900.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_09",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                132.5,
+                -932.5,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_09",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                100.0,
+                -900.0,
+                39.5
+              ],
+              "segment_type": "TURN_GUIDE",
+              "detection_valid": false,
+              "leg_id": "left_dynamic_initial_leg_09",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            },
+            {
+              "point": [
+                100.0,
+                900.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "left_dynamic_initial_leg_10",
+              "role": "DYNAMIC_LEFT_INITIAL"
+            }
+          ],
+          "lane_x": [
+            975.0,
+            885.0,
+            795.0,
+            705.0,
+            615.0,
+            525.0,
+            435.0,
+            345.0,
+            255.0,
+            165.0,
+            100.0
+          ],
+          "lane_half_spans": [
+            885.0,
+            886.5,
+            888.0,
+            889.5,
+            891.0,
+            892.5,
+            894.0,
+            895.5,
+            897.0,
+            898.5,
+            900.0
+          ],
+          "inner_start_x_m": 975.0,
+          "outer_limit_x_m": 100.0,
+          "primary_high_risk_half_span_m": 850.0,
+          "distribution_half_span_m": 900.0,
+          "description": "inner shortest leg covers primary static-risk support; 90m outward lanes progressively cover the moving distribution region"
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "V6.7.19 dynamic-inspection v0: centre-to-left north-south coverage at 39.5m",
+        "ros_time": 2013.073,
+        "wall_time": 1784865539.2868054
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 2,
+        "mode": "SEARCH_STATIC_PAIR_GUIDED",
+        "functional_role": "STATIC_SEARCH",
+        "route": {
+          "route_id": "static_pair_guided_precise_pass00_2678",
+          "role": "STATIC_RESIDUAL",
+          "altitude_m": 39.5,
+          "waypoints": [
+            {
+              "point": [
+                520.0,
+                185.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass00_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                520.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass00_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                310.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass00_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                310.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass00_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                205.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass00_leg002",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                205.0,
+                -550.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass00_leg002",
+              "role": "STATIC_RESIDUAL"
+            }
+          ],
+          "planner": "detected_pair_neighbourhood_intersection_public_static_prior_minus_three_uav_fov",
+          "pass_index": 0,
+          "static_possible_bounds": {
+            "x_min": 100.0,
+            "x_max": 1900.0,
+            "y_min": -900.0,
+            "y_max": 900.0
+          },
+          "focus_regions": [
+            {
+              "shape": "circle",
+              "name": "pair_prius_hybrid_camo_around_car_lexus",
+              "center_x": 1000.0,
+              "center_y": 0.0,
+              "radius_m": 530.0,
+              "priority": 2.0,
+              "source": "detected_static_pair:car_lexus",
+              "target_names": [
+                "prius_hybrid_camo"
+              ],
+              "detected_partner": "car_lexus",
+              "pair_relation_max_distance_m": 500.0,
+              "localization_margin_m": 30.0
+            },
+            {
+              "shape": "circle",
+              "name": "pair_fire_truck_around_prius_hybrid",
+              "center_x": 400.0,
+              "center_y": 0.0,
+              "radius_m": 530.0,
+              "priority": 2.0,
+              "source": "detected_static_pair:prius_hybrid",
+              "target_names": [
+                "fire_truck"
+              ],
+              "detected_partner": "prius_hybrid",
+              "pair_relation_max_distance_m": 500.0,
+              "localization_margin_m": 30.0
+            }
+          ],
+          "coverage_sample_count": 1207,
+          "candidate_grid_points": 1103,
+          "uncovered_grid_points": 411,
+          "estimated_covered_ratio": 0.6273798730734361,
+          "effective_fov_half_forward_m": 32.00990885888997,
+          "effective_fov_half_right_m": 56.906504638026625,
+          "fallback_full_static_pass": false,
+          "pair_guided_full_revisit": false,
+          "high_risk_component_count": 2,
+          "scan_runs": [
+            {
+              "start": [
+                520.0,
+                185.0,
+                39.5
+              ],
+              "end": [
+                520.0,
+                -585.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 56,
+              "priority": 112.0,
+              "reversed": true
+            },
+            {
+              "start": [
+                310.0,
+                -585.0,
+                39.5
+              ],
+              "end": [
+                310.0,
+                570.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 90,
+              "priority": 180.0,
+              "reversed": false
+            },
+            {
+              "start": [
+                205.0,
+                570.0,
+                39.5
+              ],
+              "end": [
+                205.0,
+                -550.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 84,
+              "priority": 168.0,
+              "reversed": true
+            }
+          ],
+          "grid_resolution_m": 35.0,
+          "lane_spacing_m": 90.0,
+          "priority_floor": 0.72,
+          "planned_route_length_m": 3045.0,
+          "candidate_source_mode": "explicit_public_prior_grid",
+          "nominal_cross_track_coverage_ratio": 1.0,
+          "planning_profile": "fast_static_discovery",
+          "description": "staged static discovery over actual uncovered coverage; optional pair-guided circles use only observed static detections, never target truth",
+          "public_prior_candidate_count": 2689,
+          "pair_intersection_candidate_count": 1103,
+          "pair_guided_priority_floor": 0.72,
+          "assigned_vehicle": 0,
+          "strategy_stage": "PAIR_GUIDED",
+          "pair_state": {
+            "missing_targets": [
+              "fire_truck",
+              "prius_hybrid_camo"
+            ],
+            "both_missing_pairs": [],
+            "pair_guided_missing": [
+              {
+                "missing_target": "prius_hybrid_camo",
+                "detected_partner": "car_lexus"
+              },
+              {
+                "missing_target": "fire_truck",
+                "detected_partner": "prius_hybrid"
+              }
+            ],
+            "complete_pairs": [
+              [
+                "person_white",
+                "car_opel"
+              ]
+            ],
+            "all_missing_pair_guidable": true
+          },
+          "missing_static_targets": [
+            "prius_hybrid_camo",
+            "fire_truck"
+          ],
+          "generated_ros_time": 2678.783,
+          "pair_guided_relaxed_to_outer_prior": false
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "every missing static target now has its paired static target detected; search only uncovered cells inside the observed-partner 500m neighbourhoods",
+        "ros_time": 2678.801,
+        "wall_time": 1784866312.7001266
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 3,
+        "mode": "SEARCH_STATIC_PAIR_GUIDED",
+        "functional_role": "STATIC_SEARCH",
+        "route": {
+          "route_id": "static_pair_guided_precise_pass00_2872",
+          "role": "STATIC_RESIDUAL",
+          "altitude_m": 39.5,
+          "waypoints": [
+            {
+              "point": [
+                1395.0,
+                80.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass01_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1395.0,
+                -445.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass01_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1465.0,
+                -305.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass01_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1465.0,
+                185.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass01_leg001",
+              "role": "STATIC_RESIDUAL"
+            }
+          ],
+          "planner": "detected_pair_neighbourhood_intersection_public_static_prior_minus_three_uav_fov",
+          "pass_index": 1,
+          "static_possible_bounds": {
+            "x_min": 100.0,
+            "x_max": 1900.0,
+            "y_min": -900.0,
+            "y_max": 900.0
+          },
+          "focus_regions": [
+            {
+              "shape": "circle",
+              "name": "pair_prius_hybrid_camo_around_car_lexus",
+              "center_x": 1000.0,
+              "center_y": 0.0,
+              "radius_m": 530.0,
+              "priority": 2.0,
+              "source": "detected_static_pair:car_lexus",
+              "target_names": [
+                "prius_hybrid_camo"
+              ],
+              "detected_partner": "car_lexus",
+              "pair_relation_max_distance_m": 500.0,
+              "localization_margin_m": 30.0
+            }
+          ],
+          "coverage_sample_count": 1333,
+          "candidate_grid_points": 717,
+          "uncovered_grid_points": 53,
+          "estimated_covered_ratio": 0.9260808926080892,
+          "effective_fov_half_forward_m": 32.00990885888997,
+          "effective_fov_half_right_m": 56.906504638026625,
+          "fallback_full_static_pass": false,
+          "pair_guided_full_revisit": false,
+          "high_risk_component_count": 1,
+          "scan_runs": [
+            {
+              "start": [
+                1395.0,
+                80.0,
+                39.5
+              ],
+              "end": [
+                1395.0,
+                -445.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 33,
+              "priority": 66.0,
+              "reversed": true
+            },
+            {
+              "start": [
+                1465.0,
+                -305.0,
+                39.5
+              ],
+              "end": [
+                1465.0,
+                185.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 20,
+              "priority": 40.0,
+              "reversed": false
+            }
+          ],
+          "grid_resolution_m": 35.0,
+          "lane_spacing_m": 90.0,
+          "priority_floor": 0.72,
+          "planned_route_length_m": 1015.0,
+          "candidate_source_mode": "explicit_public_prior_grid",
+          "nominal_cross_track_coverage_ratio": 1.0,
+          "planning_profile": "fast_static_discovery",
+          "description": "staged static discovery over actual uncovered coverage; optional pair-guided circles use only observed static detections, never target truth",
+          "public_prior_candidate_count": 2689,
+          "pair_intersection_candidate_count": 717,
+          "pair_guided_priority_floor": 0.72,
+          "assigned_vehicle": 0,
+          "strategy_stage": "PAIR_GUIDED",
+          "pair_state": {
+            "missing_targets": [
+              "prius_hybrid_camo"
+            ],
+            "both_missing_pairs": [],
+            "pair_guided_missing": [
+              {
+                "missing_target": "prius_hybrid_camo",
+                "detected_partner": "car_lexus"
+              }
+            ],
+            "complete_pairs": [
+              [
+                "person_white",
+                "car_opel"
+              ],
+              [
+                "prius_hybrid",
+                "fire_truck"
+              ]
+            ],
+            "all_missing_pair_guidable": true
+          },
+          "missing_static_targets": [
+            "prius_hybrid_camo"
+          ],
+          "generated_ros_time": 2872.184,
+          "pair_guided_relaxed_to_outer_prior": false
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "every missing static target now has its paired static target detected; search only uncovered cells inside the observed-partner 500m neighbourhoods",
+        "ros_time": 2872.204,
+        "wall_time": 1784866540.3493605
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 4,
+        "mode": "SEARCH_STATIC_PAIR_GUIDED",
+        "functional_role": "STATIC_SEARCH",
+        "route": {
+          "route_id": "static_pair_guided_precise_pass01_3027",
+          "role": "STATIC_RESIDUAL",
+          "altitude_m": 39.5,
+          "waypoints": [
+            {
+              "point": [
+                1360.0,
+                465.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass02_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1360.0,
+                -480.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass02_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1255.0,
+                -550.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass02_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1255.0,
+                535.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass02_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1150.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass02_leg002",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1150.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass02_leg002",
+              "role": "STATIC_RESIDUAL"
+            }
+          ],
+          "planner": "detected_pair_neighbourhood_intersection_public_static_prior_minus_three_uav_fov",
+          "pass_index": 2,
+          "static_possible_bounds": {
+            "x_min": 100.0,
+            "x_max": 1900.0,
+            "y_min": -900.0,
+            "y_max": 900.0
+          },
+          "focus_regions": [
+            {
+              "shape": "circle",
+              "name": "pair_prius_hybrid_camo_around_car_lexus",
+              "center_x": 1000.0,
+              "center_y": 0.0,
+              "radius_m": 530.0,
+              "priority": 2.0,
+              "source": "detected_static_pair:car_lexus",
+              "target_names": [
+                "prius_hybrid_camo"
+              ],
+              "detected_partner": "car_lexus",
+              "pair_relation_max_distance_m": 500.0,
+              "localization_margin_m": 30.0
+            }
+          ],
+          "coverage_sample_count": 1381,
+          "candidate_grid_points": 717,
+          "uncovered_grid_points": 717,
+          "estimated_covered_ratio": 0.0,
+          "effective_fov_half_forward_m": 32.00990885888997,
+          "effective_fov_half_right_m": 56.906504638026625,
+          "fallback_full_static_pass": false,
+          "pair_guided_full_revisit": true,
+          "high_risk_component_count": 1,
+          "scan_runs": [
+            {
+              "start": [
+                1360.0,
+                465.0,
+                39.5
+              ],
+              "end": [
+                1360.0,
+                -480.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 66,
+              "priority": 132.0,
+              "reversed": true
+            },
+            {
+              "start": [
+                1255.0,
+                -550.0,
+                39.5
+              ],
+              "end": [
+                1255.0,
+                535.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 79,
+              "priority": 158.0,
+              "reversed": false
+            },
+            {
+              "start": [
+                1150.0,
+                570.0,
+                39.5
+              ],
+              "end": [
+                1150.0,
+                -585.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 87,
+              "priority": 174.0,
+              "reversed": true
+            }
+          ],
+          "grid_resolution_m": 35.0,
+          "lane_spacing_m": 90.0,
+          "priority_floor": 0.4,
+          "planned_route_length_m": 3185.0,
+          "candidate_source_mode": "explicit_public_prior_grid",
+          "nominal_cross_track_coverage_ratio": 1.0,
+          "planning_profile": "fast_static_discovery",
+          "description": "staged static discovery over actual uncovered coverage; optional pair-guided circles use only observed static detections, never target truth",
+          "public_prior_candidate_count": 2689,
+          "pair_intersection_candidate_count": 717,
+          "pair_guided_priority_floor": 0.4,
+          "assigned_vehicle": 0,
+          "strategy_stage": "PAIR_GUIDED",
+          "pair_state": {
+            "missing_targets": [
+              "prius_hybrid_camo"
+            ],
+            "both_missing_pairs": [],
+            "pair_guided_missing": [
+              {
+                "missing_target": "prius_hybrid_camo",
+                "detected_partner": "car_lexus"
+              }
+            ],
+            "complete_pairs": [
+              [
+                "person_white",
+                "car_opel"
+              ],
+              [
+                "prius_hybrid",
+                "fire_truck"
+              ]
+            ],
+            "all_missing_pair_guidable": true
+          },
+          "missing_static_targets": [
+            "prius_hybrid_camo"
+          ],
+          "generated_ros_time": 3027.5,
+          "pair_guided_relaxed_to_outer_prior": false
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "every missing static target now has its paired static target detected; search only uncovered cells inside the observed-partner 500m neighbourhoods",
+        "ros_time": 3027.52,
+        "wall_time": 1784866720.1464806
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 5,
+        "mode": "SEARCH_STATIC_PAIR_GUIDED",
+        "functional_role": "STATIC_SEARCH",
+        "route": {
+          "route_id": "static_pair_guided_precise_pass02_3152",
+          "role": "STATIC_RESIDUAL",
+          "altitude_m": 39.5,
+          "waypoints": [
+            {
+              "point": [
+                1150.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass03_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1150.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass03_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1045.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass03_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1045.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass03_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                940.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass03_leg002",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                940.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass03_leg002",
+              "role": "STATIC_RESIDUAL"
+            }
+          ],
+          "planner": "detected_pair_neighbourhood_intersection_public_static_prior_minus_three_uav_fov",
+          "pass_index": 3,
+          "static_possible_bounds": {
+            "x_min": 100.0,
+            "x_max": 1900.0,
+            "y_min": -900.0,
+            "y_max": 900.0
+          },
+          "focus_regions": [
+            {
+              "shape": "circle",
+              "name": "pair_prius_hybrid_camo_around_car_lexus",
+              "center_x": 1000.0,
+              "center_y": 0.0,
+              "radius_m": 530.0,
+              "priority": 2.0,
+              "source": "detected_static_pair:car_lexus",
+              "target_names": [
+                "prius_hybrid_camo"
+              ],
+              "detected_partner": "car_lexus",
+              "pair_relation_max_distance_m": 500.0,
+              "localization_margin_m": 30.0
+            }
+          ],
+          "coverage_sample_count": 1447,
+          "candidate_grid_points": 717,
+          "uncovered_grid_points": 717,
+          "estimated_covered_ratio": 0.0,
+          "effective_fov_half_forward_m": 32.00990885888997,
+          "effective_fov_half_right_m": 56.906504638026625,
+          "fallback_full_static_pass": false,
+          "pair_guided_full_revisit": true,
+          "high_risk_component_count": 1,
+          "scan_runs": [
+            {
+              "start": [
+                1150.0,
+                -585.0,
+                39.5
+              ],
+              "end": [
+                1150.0,
+                570.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 87,
+              "priority": 174.0,
+              "reversed": false
+            },
+            {
+              "start": [
+                1045.0,
+                570.0,
+                39.5
+              ],
+              "end": [
+                1045.0,
+                -585.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 90,
+              "priority": 180.0,
+              "reversed": true
+            },
+            {
+              "start": [
+                940.0,
+                -585.0,
+                39.5
+              ],
+              "end": [
+                940.0,
+                570.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 90,
+              "priority": 180.0,
+              "reversed": false
+            }
+          ],
+          "grid_resolution_m": 35.0,
+          "lane_spacing_m": 90.0,
+          "priority_floor": 0.4,
+          "planned_route_length_m": 3465.0,
+          "candidate_source_mode": "explicit_public_prior_grid",
+          "nominal_cross_track_coverage_ratio": 1.0,
+          "planning_profile": "fast_static_discovery",
+          "description": "staged static discovery over actual uncovered coverage; optional pair-guided circles use only observed static detections, never target truth",
+          "public_prior_candidate_count": 2689,
+          "pair_intersection_candidate_count": 717,
+          "pair_guided_priority_floor": 0.4,
+          "assigned_vehicle": 0,
+          "strategy_stage": "PAIR_GUIDED",
+          "pair_state": {
+            "missing_targets": [
+              "prius_hybrid_camo"
+            ],
+            "both_missing_pairs": [],
+            "pair_guided_missing": [
+              {
+                "missing_target": "prius_hybrid_camo",
+                "detected_partner": "car_lexus"
+              }
+            ],
+            "complete_pairs": [
+              [
+                "person_white",
+                "car_opel"
+              ],
+              [
+                "prius_hybrid",
+                "fire_truck"
+              ]
+            ],
+            "all_missing_pair_guidable": true
+          },
+          "missing_static_targets": [
+            "prius_hybrid_camo"
+          ],
+          "generated_ros_time": 3152.686,
+          "pair_guided_relaxed_to_outer_prior": false
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "every missing static target now has its paired static target detected; search only uncovered cells inside the observed-partner 500m neighbourhoods",
+        "ros_time": 3152.686,
+        "wall_time": 1784866867.0476716
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 6,
+        "mode": "SEARCH_STATIC_PAIR_GUIDED",
+        "functional_role": "STATIC_SEARCH",
+        "route": {
+          "route_id": "static_pair_guided_precise_pass03_3433",
+          "role": "STATIC_RESIDUAL",
+          "altitude_m": 39.5,
+          "waypoints": [
+            {
+              "point": [
+                940.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass04_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                940.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass04_leg000",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1045.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass04_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1045.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass04_leg001",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1150.0,
+                570.0,
+                39.5
+              ],
+              "segment_type": "TRANSIT_ENTRY",
+              "detection_valid": false,
+              "leg_id": "static_risk_pass04_leg002",
+              "role": "STATIC_RESIDUAL"
+            },
+            {
+              "point": [
+                1150.0,
+                -585.0,
+                39.5
+              ],
+              "segment_type": "SEARCH_STRAIGHT",
+              "detection_valid": true,
+              "leg_id": "static_risk_pass04_leg002",
+              "role": "STATIC_RESIDUAL"
+            }
+          ],
+          "planner": "detected_pair_neighbourhood_intersection_public_static_prior_minus_three_uav_fov",
+          "pass_index": 4,
+          "static_possible_bounds": {
+            "x_min": 100.0,
+            "x_max": 1900.0,
+            "y_min": -900.0,
+            "y_max": 900.0
+          },
+          "focus_regions": [
+            {
+              "shape": "circle",
+              "name": "pair_prius_hybrid_camo_around_car_lexus",
+              "center_x": 1000.0,
+              "center_y": 0.0,
+              "radius_m": 530.0,
+              "priority": 2.0,
+              "source": "detected_static_pair:car_lexus",
+              "target_names": [
+                "prius_hybrid_camo"
+              ],
+              "detected_partner": "car_lexus",
+              "pair_relation_max_distance_m": 500.0,
+              "localization_margin_m": 30.0
+            }
+          ],
+          "coverage_sample_count": 1606,
+          "candidate_grid_points": 717,
+          "uncovered_grid_points": 717,
+          "estimated_covered_ratio": 0.0,
+          "effective_fov_half_forward_m": 32.00990885888997,
+          "effective_fov_half_right_m": 56.906504638026625,
+          "fallback_full_static_pass": false,
+          "pair_guided_full_revisit": true,
+          "high_risk_component_count": 1,
+          "scan_runs": [
+            {
+              "start": [
+                940.0,
+                570.0,
+                39.5
+              ],
+              "end": [
+                940.0,
+                -585.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 90,
+              "priority": 180.0,
+              "reversed": true
+            },
+            {
+              "start": [
+                1045.0,
+                -585.0,
+                39.5
+              ],
+              "end": [
+                1045.0,
+                570.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 90,
+              "priority": 180.0,
+              "reversed": false
+            },
+            {
+              "start": [
+                1150.0,
+                570.0,
+                39.5
+              ],
+              "end": [
+                1150.0,
+                -585.0,
+                39.5
+              ],
+              "orientation": "vertical",
+              "component": 0,
+              "covered_high_risk_cells": 87,
+              "priority": 174.0,
+              "reversed": true
+            }
+          ],
+          "grid_resolution_m": 35.0,
+          "lane_spacing_m": 90.0,
+          "priority_floor": 0.4,
+          "planned_route_length_m": 3465.0,
+          "candidate_source_mode": "explicit_public_prior_grid",
+          "nominal_cross_track_coverage_ratio": 1.0,
+          "planning_profile": "fast_static_discovery",
+          "description": "staged static discovery over actual uncovered coverage; optional pair-guided circles use only observed static detections, never target truth",
+          "public_prior_candidate_count": 2689,
+          "pair_intersection_candidate_count": 717,
+          "pair_guided_priority_floor": 0.4,
+          "assigned_vehicle": 0,
+          "strategy_stage": "PAIR_GUIDED",
+          "pair_state": {
+            "missing_targets": [
+              "prius_hybrid_camo"
+            ],
+            "both_missing_pairs": [],
+            "pair_guided_missing": [
+              {
+                "missing_target": "prius_hybrid_camo",
+                "detected_partner": "car_lexus"
+              }
+            ],
+            "complete_pairs": [
+              [
+                "person_white",
+                "car_opel"
+              ],
+              [
+                "prius_hybrid",
+                "fire_truck"
+              ]
+            ],
+            "all_missing_pair_guidable": true
+          },
+          "missing_static_targets": [
+            "prius_hybrid_camo"
+          ],
+          "generated_ros_time": 3433.133,
+          "pair_guided_relaxed_to_outer_prior": false
+        },
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "every missing static target now has its paired static target detected; search only uncovered cells inside the observed-partner 500m neighbourhoods",
+        "ros_time": 3433.159,
+        "wall_time": 1784867197.1879914
+      },
+      {
+        "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+        "vehicle_id": 0,
+        "sequence": 7,
+        "mode": "RETURN",
+        "functional_role": "STATIC_SEARCH",
+        "route": null,
+        "target_name": null,
+        "target_estimate": null,
+        "static_targets": [],
+        "reason": "maximum 32-minute search budget reached from first ARMED; start fixed-wing independent return with best available result",
+        "ros_time": 3661.477,
+        "wall_time": 1784867466.3293946
+      }
+    ],
+    "static_confirmed": [],
+    "tracking": {
+      "last": {
+        "tracking_points": 0,
+        "tracking_seconds": 0.0
+      }
+    },
+    "phase": "DONE"
+  }
+}

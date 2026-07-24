@@ -1,0 +1,33 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad=0.25, nodesep=0.25, ranksep=0.42, fontname="Noto Sans CJK SC", fontsize=15, label="正式比赛全任务流程与启动屏障", labelloc=t];
+  node [shape=box, style="rounded,filled", fontname="Noto Sans CJK SC", fontsize=10, color="#475569", fillcolor="#f8fafc", margin="0.12,0.07"];
+  edge [fontname="Noto Sans CJK SC", fontsize=8, color="#64748b", arrowsize=0.7];
+  start [shape=ellipse, label="机器配置与备份", fillcolor="#e0e7ff"];
+  pre [label="validate + doctor\nYOLO模型/环境/类别/并发容量"];
+  base [label="官方基础环境\nPX4/Gazebo → 通信 → 位姿"];
+  app [label="管理器 + 3飞行 + 3感知\n+ 3独立YOLO"];
+  gate [shape=diamond, label="三路真实处理链\n连续≥10 Hz?", fillcolor="#fef3c7"];
+  bag [label="启动score1.bag\n（无人机解锁前）"];
+  motion [label="启动model_state.py\n随后授权任务"];
+  take [label="错峰起飞/10m转换\n固定翼约40m搜索"];
+  search [label="v0/v1动态巡检\n中心向外\nv2机动巡检\n东西航线北→南"];
+  dynamic [label="发现动态目标\n角色重分配"];
+  track [label="两架动态跟踪\n30m范围转旋翼\n丢失→最后位置→90m方形螺旋"];
+  stat [label="剩余飞机静态搜索\n候选聚类/冲突隔离/补漏"];
+  verify [label="静态精准定位\n30m、yaw=0、XY≤5m、稳定3s"];
+  done [shape=diamond, label="任务完成或\n首架ARMED后32min?", fillcolor="#fef3c7"];
+  ret [label="独立固定翼优先返航\n转旋翼/自动降落"];
+  out [label="最后一架DISARMED\n发布一次最终官方话题\n生成态势与证据"];
+  end [shape=ellipse, label="35min内完成并提交", fillcolor="#dcfce7"];
+
+  start->pre->base->app->gate;
+  gate->app [label="否：降imgsz/修环境", color="#dc2626"];
+  gate->bag [label="是"];
+  bag->motion->take->search->dynamic;
+  dynamic->track; dynamic->stat;
+  stat->verify;
+  track->done; verify->done;
+  done->search [label="未完成且未到32min", constraint=false];
+  done->ret [label="完成/到时"];
+  ret->out->end;
+}

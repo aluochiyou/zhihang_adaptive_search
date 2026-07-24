@@ -1,0 +1,28 @@
+{
+  "note": "Concurrent synthetic benchmark; formal real-camera barrier is authoritative.",
+  "required_fps_per_worker": 10.0,
+  "workers": [
+    {
+      "vehicle_id": 0,
+      "ok": true,
+      "device": "0",
+      "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+      "fps": 99.17257493656747
+    },
+    {
+      "vehicle_id": 1,
+      "ok": true,
+      "device": "1",
+      "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+      "fps": 91.7125196758351
+    },
+    {
+      "vehicle_id": 2,
+      "ok": true,
+      "device": "1",
+      "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+      "fps": 92.58522050224674
+    }
+  ],
+  "pass": true
+}

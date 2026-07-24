@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "model": "/home/uav/zhihang_yolo26/weights/best.pt",
+  "python_runtime": "/home/uav/anaconda3/envs/yolo26/bin/python",
+  "torch": "2.6.0+cu124",
+  "ultralytics": "8.4.104",
+  "opencv": "5.0.0",
+  "cuda_available": true,
+  "cuda_version": "12.4",
+  "device": "1",
+  "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+  "imgsz": 640,
+  "quantize_requested": 16,
+  "quantize_used": 16,
+  "quantize_supported": true,
+  "iterations": 20,
+  "elapsed_seconds": 0.21807273500598967,
+  "single_worker_synthetic_fps": 91.7125196758351,
+  "minimum_fps": 10.0,
+  "single_worker_fps_pass": true,
+  "class_names": {
+    "0": "prius_hybrid",
+    "1": "car_lexus",
+    "2": "car_opel",
+    "3": "person_white",
+    "4": "prius_hybrid_camo",
+    "5": "fire_truck",
+    "6": "suv_camo",
+    "7": "person_red"
+  },
+  "missing_required_classes": []
+}

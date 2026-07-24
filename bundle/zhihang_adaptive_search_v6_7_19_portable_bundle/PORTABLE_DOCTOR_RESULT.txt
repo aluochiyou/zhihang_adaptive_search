@@ -1,0 +1,77 @@
+=== Zhihang V6.7.19 Portable Doctor ===
+[INFO] profile=/home/uav/zhihang2026_ws/最新方案/zhihang_adaptive_search_v6_7_19_portable_complete (1)/zhihang_adaptive_search_v6_7_19_portable_bundle/machine_profile.env
+[INFO] os=Ubuntu 20.04.6 LTS
+[INFO] terminal_backend=gnome-terminal DISPLAY=:0
+[PASS] ROS setup: /opt/ros/noetic/setup.bash
+[PASS] competition message workspace setup: /home/uav/zhihang_ws/devel/.private/catkin_tools_prebuild/setup.bash
+[PASS] competition workspace: /home/uav/zhihang2026_ws
+[PASS] workspace src: /home/uav/zhihang2026_ws/src
+[PASS] XTDrone root: /home/uav/XTDrone
+[PASS] XTDrone communication: /home/uav/XTDrone/communication
+[PASS] pose script: /home/uav/XTDrone/sensing/pose_ground_truth/get_multi_vehcle_local_pose.sh
+[PASS] model_state.py: /home/uav/XTDrone/zhihang2026/model_state.py
+[PASS] YOLO model: /home/uav/zhihang_yolo26/weights/best.pt
+[PASS] XTDrone communication initializer: /home/uav/XTDrone/communication/multi_vehicle_communication.sh
+[PASS] QGroundControl: /home/uav/QGroundControl.AppImage
+[YOLO-RUNTIME] type=conda
+[YOLO-RUNTIME] conda_env=yolo26
+[OK] python: 3.10.20 /home/uav/anaconda3/envs/yolo26/bin/python
+[OK] torch: 2.6.0+cu124
+[OK] cuda: True
+[OK] cuda devices: 2
+[OK] gpu[0]: NVIDIA GeForce RTX 2080 Ti
+[OK] gpu[1]: NVIDIA GeForce RTX 2080 Ti
+[OK] ultralytics: 8.4.104
+[OK] cv2: 5.0.0
+[OK] numpy: 2.2.6
+[OK] YOLO import: <class 'ultralytics.models.yolo.model.YOLO'>
+[PASS] YOLO imports/runtime
+[OK] model loaded: /home/uav/zhihang_yolo26/weights/best.pt
+[OK] runtime: /home/uav/anaconda3/envs/yolo26/bin/python
+[OK] torch=2.6.0+cu124 cuda=True device=0
+[OK] gpu=NVIDIA GeForce RTX 2080 Ti
+[OK] ultralytics=8.4.104 opencv=5.0.0
+[CHECK] class_count=8 missing_required=[]
+[CHECK] synthetic single-worker fps=102.91 requirement=0.10
+[NOTE] Formal launch still requires three real camera/perception pipelines to sustain >=10 Hz before the mission start barrier.
+[OK] YOLO runtime/model verification passed
+[PASS] real model load/inference
+PASS three enabled aircraft :: [0, 1, 2]
+PASS six static targets :: ['prius_hybrid', 'car_lexus', 'car_opel', 'person_white', 'prius_hybrid_camo', 'fire_truck']
+PASS two dynamic targets :: ['suv_camo', 'person_red']
+PASS formal source is YOLO projected :: yolo_projected
+PASS formal truth relay disabled :: False
+PASS validation evaluator disabled in formal mode :: False
+PASS real perception minimum is 10 Hz :: 10.0
+PASS 32 minute search budget :: 1920.0
+PASS 3 minute return reserve :: 180.0
+PASS 35 minute total limit :: 2100.0
+PASS dynamic FW-to-MC gate is 30 m :: 30.0
+PASS dynamic reacquisition square spiral :: square_spiral
+PASS dynamic reacquisition spacing 90 m :: 90.0
+PASS dynamic reacquisition speed 6 m/s :: 6.0
+PASS cross-aircraft target injection enabled :: True
+PASS static hover altitude 30 m :: 30.0
+PASS static hover XY tolerance 5 m :: 5.0
+PASS static hover Z tolerance 1 m :: 1.0
+PASS static hover yaw 0 deg :: 0.0
+PASS static hover stable 3 s :: 3.0
+PASS person_white west offset 10 m :: [-10.0, 0.0]
+PASS static HOLD recovery enabled :: True
+PASS manager has no Gazebo target-truth subscription
+PASS formal estimator has no Gazebo target truth
+PASS first-ARMED competition clock retained
+PASS maximum 32-minute return trigger retained
+PASS invalid fixed-wing zero-setpoint guard retained
+PASS forced HOLD recovery retained
+PASS official static/dynamic topic bridge installed
+PASS official final payload is category/endpoints based
+PASS partial official result does not suppress scoreable component
+PASS score1 bag contains every official required topic
+PASS protected XTDrone communication files are not packaged
+[OK] all competition-readiness checks passed
+[PASS] competition configuration
+[PASS] port available: 17771
+[PASS] port available: 17772
+[PASS] port available: 17773
+[OK] portable doctor passed; report=/home/uav/zhihang2026_ws/最新方案/zhihang_adaptive_search_v6_7_19_portable_complete (1)/zhihang_adaptive_search_v6_7_19_portable_bundle/PORTABLE_DOCTOR_RESULT.txt

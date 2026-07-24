@@ -1,0 +1,174 @@
+{
+  "version": "6.7.19",
+  "config": "/home/uav/zhihang2026_ws/最新方案/zhihang_adaptive_search_v6_7_19_portable_complete (1)/zhihang_adaptive_search_v6_7_19_portable_bundle/zhihang_adaptive_search_v6/config/adaptive_search_formal.yaml",
+  "live": false,
+  "checks": [
+    {
+      "name": "three enabled aircraft",
+      "pass": true,
+      "detail": "[0, 1, 2]"
+    },
+    {
+      "name": "six static targets",
+      "pass": true,
+      "detail": "['prius_hybrid', 'car_lexus', 'car_opel', 'person_white', 'prius_hybrid_camo', 'fire_truck']"
+    },
+    {
+      "name": "two dynamic targets",
+      "pass": true,
+      "detail": "['suv_camo', 'person_red']"
+    },
+    {
+      "name": "formal source is YOLO projected",
+      "pass": true,
+      "detail": "yolo_projected"
+    },
+    {
+      "name": "formal truth relay disabled",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "validation evaluator disabled in formal mode",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "real perception minimum is 10 Hz",
+      "pass": true,
+      "detail": "10.0"
+    },
+    {
+      "name": "32 minute search budget",
+      "pass": true,
+      "detail": "1920.0"
+    },
+    {
+      "name": "3 minute return reserve",
+      "pass": true,
+      "detail": "180.0"
+    },
+    {
+      "name": "35 minute total limit",
+      "pass": true,
+      "detail": "2100.0"
+    },
+    {
+      "name": "dynamic FW-to-MC gate is 30 m",
+      "pass": true,
+      "detail": "30.0"
+    },
+    {
+      "name": "dynamic reacquisition square spiral",
+      "pass": true,
+      "detail": "square_spiral"
+    },
+    {
+      "name": "dynamic reacquisition spacing 90 m",
+      "pass": true,
+      "detail": "90.0"
+    },
+    {
+      "name": "dynamic reacquisition speed 6 m/s",
+      "pass": true,
+      "detail": "6.0"
+    },
+    {
+      "name": "cross-aircraft target injection enabled",
+      "pass": true,
+      "detail": "True"
+    },
+    {
+      "name": "static hover altitude 30 m",
+      "pass": true,
+      "detail": "30.0"
+    },
+    {
+      "name": "static hover XY tolerance 5 m",
+      "pass": true,
+      "detail": "5.0"
+    },
+    {
+      "name": "static hover Z tolerance 1 m",
+      "pass": true,
+      "detail": "1.0"
+    },
+    {
+      "name": "static hover yaw 0 deg",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "static hover stable 3 s",
+      "pass": true,
+      "detail": "3.0"
+    },
+    {
+      "name": "person_white west offset 10 m",
+      "pass": true,
+      "detail": "[-10.0, 0.0]"
+    },
+    {
+      "name": "static HOLD recovery enabled",
+      "pass": true,
+      "detail": "True"
+    },
+    {
+      "name": "manager has no Gazebo target-truth subscription",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "formal estimator has no Gazebo target truth",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "first-ARMED competition clock retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "maximum 32-minute return trigger retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid fixed-wing zero-setpoint guard retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "forced HOLD recovery retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "official static/dynamic topic bridge installed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "official final payload is category/endpoints based",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "partial official result does not suppress scoreable component",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "score1 bag contains every official required topic",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "protected XTDrone communication files are not packaged",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": true,
+  "failed": []
+}

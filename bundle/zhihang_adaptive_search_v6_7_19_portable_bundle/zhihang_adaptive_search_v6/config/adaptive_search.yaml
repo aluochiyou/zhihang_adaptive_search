@@ -1,0 +1,588 @@
+mission:
+  scene_id: scene_001_adaptive_v6_7_19_validation
+  random_seed: -1
+  plan_only: false
+  enabled_vehicle_ids:
+  - 0
+  - 1
+  - 2
+  output_root: ~/zhihang_search_runs_v6
+  vehicle_output_root: ~/zhihang_vehicle_runs_v6
+  search_altitude_m: 40.0
+  track_altitude_m: 30.0
+  static_verify_altitude_m: 30.0
+  takeoff_transition_height_m: 10.0
+  takeoff_stagger_seconds:
+  - 0.0
+  - 5.0
+  - 10.0
+  start_barrier_lead_seconds: 2.0
+  ready_timeout_seconds: 300.0
+  mission_timeout_seconds: 1920.0
+  manager_heartbeat_hz: 5.0
+  manager_heartbeat_timeout_seconds: 8.0
+  task_ack_timeout_seconds: 0.0
+  assignment_publish_hz: 5.0
+  result_flush_seconds: 3.0
+  abort_on_vehicle_failure: false
+  vehicle_failure_action: coordinated_safe_return
+  abort_on_perception_loss_during_flight: false
+  search_altitudes_m:
+  - 39.5
+  - 40.0
+  - 40.5
+  start_authorization_required: true
+  start_authorization_timeout_seconds: 180.0
+  target_motion_settle_seconds: 0.5
+  model_state_launch_policy: after_three_yolo_ready_before_start_authorization
+flight_control:
+  control_rate_hz: 30.0
+  status_rate_hz: 10.0
+  offboard_prestream_seconds: 3.0
+  offboard_confirm_timeout_seconds: 8.0
+  arming_retry_timeout_seconds: 35.0
+  arming_retry_interval_seconds: 1.0
+  transition_timeout_seconds: 45.0
+  position_timeout_seconds: 180.0
+  waypoint_timeout_seconds: 150.0
+  fixed_wing_speed_mps: 18.0
+  fixed_wing_waypoint_acceptance_m: 30.0
+  fixed_wing_pass_gate_m: 12.0
+  post_transition_hold_seconds: 1.0
+  home_hover_height_m: 12.0
+  landing_timeout_seconds: 120.0
+  search_interrupt_poll_seconds: 0.05
+  auto_land: true
+  skip_fixed_wing: false
+role_policy:
+  dynamic_inspection_vehicle_ids:
+  - 0
+  - 1
+  maneuver_inspection_vehicle_id: 2
+  first_dynamic_tracker: maneuver_inspection_vehicle
+  second_dynamic_tracker: detecting_free_dynamic_inspection_vehicle
+  static_search_vehicle: remaining_dynamic_inspection_vehicle
+search_area:
+  model_state_path: ~/XTDrone/zhihang2026/model_state.py
+  safe_x_min: 100.0
+  safe_x_max: 1900.0
+  safe_y_min: -900.0
+  safe_y_max: 900.0
+  initial_x_min: 350.0
+  initial_x_max: 1650.0
+  initial_y_min: -650.0
+  initial_y_max: 650.0
+dynamic_search:
+  target_speed_mps: 1.0
+  lane_spacing_m: 90.0
+  center_gap_m: 50.0
+  base_side_extension_m: 20.0
+  maximum_side_extension_m: 250.0
+  transition_time_allowance_seconds: 18.0
+  first_leg_half_span_m: 650.0
+  half_span_growth_per_pair_m: 150.0
+  maximum_leg_half_span_m: 900.0
+  boundary_reserve_m: 0.0
+  turn_guide_samples: 1
+  fallback_revisit_outer_edge: true
+  search_direction: inner_to_outer
+  outward_target_motion_allowance_seconds: 180.0
+  continuation_turn_guide_samples: 1
+  continuation_center_separation_m: 90.0
+  continuation_direction: own_side_outer_to_center
+  continuation_half_lane_offset_on_repeat: true
+static_search:
+  lane_spacing_m: 90.0
+  primary_center_half_width_m: 350.0
+  first_leg_half_span_m: 300.0
+  half_span_growth_per_lane_m: 90.0
+  maximum_leg_half_span_m: 850.0
+  residual_search_enabled: true
+  residual_lane_spacing_m: 90.0
+  residual_grid_resolution_m: 25.0
+  residual_lane_offset_m: 50.0
+  residual_min_segment_length_m: 140.0
+  residual_segment_padding_m: 50.0
+  coverage_conservative_ratio: 0.95
+  coverage_sample_spacing_m: 18.0
+  coverage_sample_max_interval_seconds: 2.0
+  coverage_sample_yaw_change_deg: 8.0
+  coverage_max_samples: 12000
+  risk_grid_resolution_m: 35.0
+  risk_lane_spacing_m: 90.0
+  risk_min_segment_length_m: 100.0
+  risk_segment_padding_m: 35.0
+  risk_max_scan_runs: 60
+  risk_verification_coverage_ratio: 0.58
+  planner_mode: global_prior_grid_minus_three_uav_fov
+  high_risk_regions:
+  - name: core
+    x_min: 350.0
+    x_max: 1650.0
+    y_min: -650.0
+    y_max: 650.0
+    priority: 1.0
+  - name: buffer
+    x_min: 200.0
+    x_max: 1800.0
+    y_min: -800.0
+    y_max: 800.0
+    priority: 0.72
+  - name: outer
+    x_min: 100.0
+    x_max: 1900.0
+    y_min: -900.0
+    y_max: 900.0
+    priority: 0.4
+  pass_priority_floors:
+  - 1.0
+  - 0.72
+  - 0.4
+  minimum_component_cells: 1
+  max_route_length_m: 9000.0
+  route_replan_on_new_static: false
+  route_replan_min_interval_seconds: 8.0
+  preserve_current_route_after_two_dynamic_targets: true
+  committed_static_stage_order:
+  - PRESERVE_CURRENT_OWN_ROUTE
+  - PRESERVE_OPPOSITE_REMAINDER
+  allow_pair_guided_interrupt_during_committed_route: true
+  allow_verify_interrupt_during_committed_route: true
+  allow_empty_remainder_interrupt_during_committed_route: true
+  conditional_commitment_interrupt_policy: next_waypoint_boundary
+  conditional_commitment_relevance_check_seconds: 5.0
+  conditional_commitment_uncovered_cell_threshold: 3
+  conditional_commitment_max_boundary_wait_seconds: 75.0
+  initial_search_direction: east_west_north_to_south_then_square_outward
+  residual_planning_profile: fast_static_discovery
+  fast_discovery_overlap_policy: minimal_overlap_after_two_dynamic_targets
+  initial_lane_spacing_m: 90.0
+  static_target_pairs:
+  - - car_lexus
+    - prius_hybrid_camo
+  - - person_white
+    - car_opel
+  - - prius_hybrid
+    - fire_truck
+  pair_search_radius_m: 500.0
+  pair_search_localization_margin_m: 30.0
+  pair_guided_priority: 2.0
+  pair_guided_force_revisit_when_empty: true
+  pair_guided_verification_coverage_ratio: 0.45
+  precise_remainder_enabled: true
+  precise_remainder_priority_floor: 0.72
+  precise_remainder_corridor_half_width_m: 75.0
+  precise_remainder_grid_resolution_m: 35.0
+  precise_remainder_max_route_length_m: 4200.0
+  pair_guided_initial_priority_floor: 0.72
+  pair_guided_fallback_priority_floor: 0.4
+  pair_guided_grid_resolution_m: 35.0
+  pair_guided_max_route_length_m: 3600.0
+  broad_search_stage_order:
+  - OWN_REMAINDER
+  - OPPOSITE_REMAINDER
+  - GLOBAL_GAP_FILL
+  use_model_derived_high_risk: true
+  model_derived_primary_offset_m: 200.0
+  model_derived_maximum_offset_m: 300.0
+  initial_square_outer_margin_m: 100.0
+  initial_square_inset_m: 90.0
+  initial_square_ring_count: 8
+  initial_square_corner_radius_m: 40.0
+  initial_square_corner_guide_samples: 1
+  initial_square_expansion_m: 90.0
+straight_detection_gate:
+  enabled: true
+  segment_edge_exclusion_m: 35.0
+  maximum_cross_track_error_m: 35.0
+  maximum_heading_error_deg: 20.0
+  minimum_ground_speed_mps: 8.0
+  valid_segment_types:
+  - SEARCH_STRAIGHT
+  - SEARCH_CONNECTOR_STRAIGHT
+tracking:
+  target_stream_source: external_track_topic
+  intercept_altitude_m: 40.0
+  # V6.7.19: dynamic tracker remains fixed-wing until within 30 m horizontally.
+  transition_to_mc_radius_m: 30.0
+  prediction_seconds: 1.0
+  target_timeout_seconds: 5.0
+  intercept_prediction_cap_seconds: 30.0
+  reacquire_timeout_seconds: 20.0
+  minimum_track_seconds: 45.0
+  minimum_track_points: 60
+  target_update_hz: 5.0
+  kp_xy: 1.1
+  ki_xy: 0.08
+  kd_xy: 0.45
+  kp_z: 0.9
+  ki_z: 0.05
+  kd_z: 0.3
+  velocity_feedforward_gain: 0.65
+  maximum_xy_speed_mps: 5.0
+  maximum_z_speed_mps: 2.0
+  maximum_xy_acceleration_mps2: 1.5
+  maximum_z_acceleration_mps2: 1.0
+  integral_limit_xy: 2.0
+  integral_limit_z: 1.5
+  center_tolerance_m: 3.0
+  position_filter_time_constant_seconds: 0.8
+  velocity_filter_time_constant_seconds: 1.2
+  measurement_jump_gate_m: 35.0
+  visual_estimator_coast_seconds: 3.0
+  position_kp_xy: 0.45
+  relative_velocity_damping_gain: 0.55
+  vertical_velocity_damping_gain: 0.35
+  integral_gain_xy: 0.02
+  position_deadband_m: 1.5
+  command_filter_time_constant_seconds: 0.45
+  yaw_hold_mode: capture_on_mc_transition
+  # V6.7.19 camera/FOV protection: yaw stays frozen while the target is far
+  # or stale; path-yaw is enabled only near a fresh target.
+  yaw_adjust_enable_radius_m: 20.0
+  yaw_adjust_max_target_age_seconds: 0.8
+  yaw_adjust_minimum_command_speed_mps: 0.35
+  yaw_freeze_on_target_loss: true
+  loss_continue_speed_mps: 2.5
+  yaw_kp: 1.2
+  maximum_yaw_rate_rad_s: 0.35
+  yaw_deadband_deg: 3.0
+  last_known_approach_speed_mps: 5.0
+  last_known_arrival_tolerance_m: 6.0
+  last_known_approach_timeout_seconds: 90.0
+  reacquisition_base_radius_m: 20.0
+  reacquisition_target_speed_bound_mps: 1.5
+  reacquisition_max_radius_m: 250.0
+  reacquisition_prediction_cap_seconds: 120.0
+  reacquisition_lane_spacing_m: 90.0
+  reacquisition_speed_mps: 6.0
+  reacquisition_waypoint_tolerance_m: 5.0
+  controller_note: V6.7.19 filtered relative-velocity controller; FW intercept stays near 40 m and converts to MC only inside the 30 m horizontal gate; MC descends to 30 m only after dynamic lock
+  loss_recovery_note: keep moving toward the latest reliable state without an initial hover; freeze yaw while lost/far, then run the 90 m square spiral at 6 m/s
+  reacquisition_pattern: square_spiral
+  reacquisition_yaw_mode: frozen_heading_until_fresh_target_inside_20m
+  reacquisition_keep_current_altitude: true
+  defer_descent_until_target_motion_confirmed: true
+  track_altitude_descent_rate_mps: 1.0
+  motion_validation:
+    enabled_for:
+    - suv_camo
+    bypass_targets:
+    - person_red
+    observation_seconds: 5.0
+    minimum_unique_samples: 5
+    minimum_confidence: 0.6
+    maximum_horizontal_std_m: 5.0
+    moving_min_displacement_m: 2.5
+    moving_min_speed_mps: 0.35
+    stationary_max_displacement_m: 1.5
+    stationary_max_speed_mps: 0.2
+    stationary_reclass_target: prius_hybrid_camo
+  external_injection:
+    enabled: true
+    minimum_confidence: 0.65
+    maximum_horizontal_std_m: 5.0
+    maximum_age_seconds: 1.0
+    minimum_position_change_m: 8.0
+    fast_approach_speed_mps: 8.0
+    fast_approach_tolerance_m: 6.0
+    fast_approach_timeout_seconds: 90.0
+    estimator_reinitialize_after_seconds: 4.0
+  suv_false_positive:
+    suppression_radius_m: 20.0
+    suppression_seconds: 1800.0
+static_verify:
+  transition_to_mc_radius_m: 30.0
+  hover_xy_tolerance_m: 5.0
+  hover_z_tolerance_m: 1.0
+  stable_seconds: 3.0
+  maximum_xy_speed_mps: 4.0
+  maximum_z_speed_mps: 2.0
+  nearest_neighbor_order: true
+  hover_altitude_m: 30.0
+  maximum_xy_acceleration_mps2: 2.5
+  kp_xy: 0.45
+  kp_z: 0.8
+  progress_timeout_seconds: 20.0
+  progress_minimum_m: 2.0
+  fixed_wing_intercept_timeout_seconds: 120.0
+  mc_approach_timeout_seconds: 90.0
+  retransition_altitude_m: 30.0
+  per_target_max_attempts: 2
+  incomplete_reissue_delay_seconds: 1.0
+  hover_yaw_deg: 0.0
+  hover_yaw_tolerance_deg: 5.0
+  yaw_kp: 1.2
+  maximum_yaw_rate_rad_s: 0.35
+  yaw_deadband_deg: 2.0
+  target_hover_offset_xy_m:
+    person_white:
+    - -10.0
+    - 0.0
+  fixed_wing_pass_through_m: 100.0
+  fixed_wing_fallback_transition_radius_m: 55.0
+  fixed_wing_closest_approach_growth_m: 8.0
+  hover_refinement_minimum_reports: 2
+  hover_refinement_maximum_std_m: 12.0
+  hold_recovery_enabled: true
+  hold_recovery_timeout_seconds: 10.0
+  hold_recovery_forward_distance_m: 120.0
+  reject_candidate_when_no_refinement: true
+  position_lock_note: search-stage static location is frozen until the 3 s MC hover produces a reliable multi-frame refinement
+  transition_note: retain a valid FW pass-through position setpoint during FW-to-MC conversion; never send zero FW velocity
+static_candidate_management:
+  nearby_merge_radius_m: 25.0
+  maximum_candidates_per_target: 5
+  rejected_region_radius_m: 25.0
+  rejected_region_suppression_seconds: 900.0
+  final_selection_rule: highest_precise_confidence_after_all_candidate_groups_resolved
+  prius_suv_confusion:
+    enabled: true
+    exclusion_radius_m: 60.0
+    maximum_suv_state_age_seconds: 30.0
+    prius_hybrid_camo_policy: one_best_nonconflicting_candidate
+    suv_camo_policy: retain_dynamic_only_after_existing_five_second_motion_gate
+return_strategy:
+  landing_offset_xy_m:
+    '0':
+    - 0.0
+    - 30.0
+    '1':
+    - 0.0
+    - 0.0
+    '2':
+    - 0.0
+    - -30.0
+  return_gate_offset_xy_m:
+    '0':
+    - 120.0
+    - 60.0
+    '1':
+    - 150.0
+    - 0.0
+    '2':
+    - 120.0
+    - -60.0
+  use_fixed_wing_if_distance_above_m: 120.0
+  preserve_multicopter_after_tracking: false
+  fixed_wing_timeout_fallback_to_multicopter: true
+  multicopter_return_altitude_m: 30.0
+  multicopter_segment_length_m: 140.0
+  multicopter_segment_timeout_seconds: 120.0
+  multicopter_return_control: velocity_guidance
+  multicopter_return_kp_xy: 0.35
+  multicopter_return_kp_z: 0.8
+  multicopter_return_max_xy_speed_mps: 8.0
+  multicopter_return_max_z_speed_mps: 2.5
+  multicopter_return_acceleration_mps2: 3.0
+  multicopter_progress_timeout_seconds: 25.0
+  multicopter_progress_minimum_m: 5.0
+  landing_approach_timeout_seconds: 240.0
+  result_wait_warning_seconds: 30.0
+  force_fixed_wing_after_tracking: true
+  fixed_wing_return_min_distance_m: 120.0
+  fixed_wing_return_altitude_m: 40.0
+  fixed_wing_pass_through_distance_m: 80.0
+  fixed_wing_return_prestream_seconds: 1.0
+  fixed_wing_pass_setpoint_hold_seconds: 0.35
+  command_handover_hold_seconds: 0.35
+  reserved_return_seconds: 180.0
+  competition_total_limit_seconds: 2100.0
+coordinate_transform:
+  world_to_local_matrix:
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 1.0
+  calibration_samples: 30
+  calibration_interval_seconds: 0.05
+  maximum_calibration_std_m: 0.5
+camera:
+  topics:
+    '0': /standard_vtol_0/camera/image_raw
+    '1': /standard_vtol_1/camera/image_raw
+    '2': /standard_vtol_2/camera/image_raw
+  camera_info_topics:
+    '0': /standard_vtol_0/camera/camera_info
+    '1': /standard_vtol_1/camera/camera_info
+    '2': /standard_vtol_2/camera/camera_info
+  fallback_width: 1280
+  fallback_height: 720
+  fallback_fx: 369.502083
+  fallback_fy: 369.502083
+  fallback_cx: 640.0
+  fallback_cy: 360.0
+  image_u_to_body_right_sign: 1.0
+  image_v_to_body_forward_sign: -1.0
+  ground_z_m: 0.2
+  distortion_model: plumb_bob
+  distortion_coefficients: []
+perception:
+  selected_result_source: fov_proxy
+  fov_margin_ratio: 0.88
+  proxy_publish_rate_hz: 10.0
+  dynamic_repeat_hz: 5.0
+  require_straight_gate_for_fw_search: true
+  static_targets:
+  - prius_hybrid
+  - car_lexus
+  - car_opel
+  - person_white
+  - prius_hybrid_camo
+  - fire_truck
+  dynamic_targets:
+  - suv_camo
+  - person_red
+  target_fps: 15.0
+  minimum_required_fps: 10.0
+  performance_window_seconds: 5.0
+  readiness_consecutive_windows: 3
+  readiness_minimum_processed_frames: 40
+  max_frame_age_seconds: 0.3
+  jpeg_quality: 85
+  static_rejection_image_jpeg_quality: 95
+  reconnect_seconds: 1.0
+  socket_timeout_seconds: 20.0
+  yolo_endpoints:
+    '0':
+      host: 127.0.0.1
+      port: 17771
+    '1':
+      host: 127.0.0.1
+      port: 17772
+    '2':
+      host: 127.0.0.1
+      port: 17773
+  class_kind_map:
+    prius_hybrid: static
+    car_lexus: static
+    car_opel: static
+    person_white: static
+    prius_hybrid_camo: static
+    fire_truck: static
+    suv_camo: dynamic
+    person_red: dynamic
+    static_target: static
+    dynamic_target: dynamic
+  detection_display:
+    enabled: true
+    window_title_prefix: YOLO Target Detection
+    minimum_confidence: 0.25
+    close_when_no_valid_target: false
+    window_width: 620
+    window_height: 350
+    auto_tile: true
+    window_gap_px: 8
+    window_origin_x: 0
+    window_origin_y: 0
+    headless_disable_on_error: true
+    always_open: true
+    tile_columns: 3
+  detection_event_validation:
+    enabled: true
+    validation_only: true
+    high_confidence_threshold: 0.6
+    minimum_expected_visibility_seconds: 0.8
+    minimum_expected_frames: 6
+    correct_minimum_consecutive_frames: 3
+    correct_minimum_frame_ratio: 0.25
+    false_positive_minimum_consecutive_frames: 3
+    false_positive_minimum_seconds: 0.35
+    event_gap_seconds: 0.55
+    platform_exclusion_radius_m: 120.0
+    minimum_evaluation_altitude_m: 15.0
+    expected_fov_margin_ratio: 0.88
+    saved_jpeg_quality: 92
+    save_correct_event_image: true
+    class_aliases: {}
+    event_definition_note: continuous visibility/detection events, never per-frame scoring
+    truth_firewall_note: Gazebo truth is read only by the validation evaluator and never by manager planning or flight control
+    report_confidence_threshold: 0.5
+    correct_localization_error_m: 20.0
+    minimum_correct_reports: 1
+    wrong_report_minimum_reports: 1
+    wrong_report_event_gap_seconds: 0.75
+    save_raw_and_annotated_images: true
+    evaluation_basis: stable localization reports, not individual YOLO frames
+    classification_note: miss=no effective report while target is expected; wrong_report=reported class/visibility/position inconsistent; correct=matching report within localization tolerance
+  target_localization:
+    enabled: true
+    minimum_confidence: 0.5
+    minimum_consecutive_frames: 3
+    maximum_frame_gap_seconds: 0.35
+    sample_window_frames: 8
+    spatial_consistency_radius_m: 30.0
+    maximum_horizontal_std_m: 12.0
+    maximum_ground_range_m: 350.0
+    image_anchor_mode: bottom_center
+    dynamic_report_hz: 5.0
+    static_repeat_seconds: 9999.0
+    require_straight_gate_for_fw_search: true
+    use_camera_info_distortion: true
+    camera_position_body_m:
+    - 0.0
+    - 0.0
+    - 0.0
+    optical_to_body_matrix:
+    - - 0.0
+      - -1.0
+      - 0.0
+    - - -1.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - -1.0
+    management_source_names:
+    - yolo_projected
+    - yolo_localized
+    class_aliases: {}
+    report_rule_note: publish only after target-specific detections exceed 0.50 for at least three consecutive frames and the ray-plane positions are spatially consistent
+    truth_firewall_note: localization uses aircraft pose/attitude and camera calibration only; no target truth enters this module
+    static_hover_report_hz: 2.0
+    tracking_recovery_phases:
+    - TRACK_MC_LAST_KNOWN_APPROACH
+    - TRACK_MC_REACQUIRE
+    - TRACK_DYNAMIC_MC
+yolo26_runtime:
+  device: '0'
+  confidence: 0.25
+  iou: 0.7
+  half_precision: false
+  adaptive_sizes:
+  - 640
+  - 512
+  - 416
+  minimum_required_fps: 10.0
+  performance_window_seconds: 5.0
+  adaptive_check_interval_seconds: 5.0
+  warmup_iterations: 3
+competition_output:
+  enabled: true
+  static_topic: /zhihang2026/static_targets/pose
+  dynamic_topic: /zhihang2026/dynamic_targets/pose
+  # Leave blank to discover the supplied zhihang_ws message type by field structure.
+  outer_message_type: ''
+  maximum_entries_per_topic: 20
+  static_model_name_mode: category_static_target
+  dynamic_endpoint_mode: start_and_end
+  first_message_is_final: true
+  bridge_delivery_wait_seconds: 1.0
+
+completion:
+  require_both_dynamic_targets: true
+  require_all_static_detected: true
+  require_all_static_confirmed: true
+  allow_return_after_timeout: true
+  soft_deadline_seconds: 1500.0
+  hard_deadline_seconds: 1800.0
+  static_residual_extension_seconds: 120.0
+validation:
+  fov_proxy_enabled: true
+  truth_target_relay_enabled: true
+  truth_isolation_note: Only validation nodes may read Gazebo truth. Manager/planner/flight agents never subscribe /gazebo/model_states.

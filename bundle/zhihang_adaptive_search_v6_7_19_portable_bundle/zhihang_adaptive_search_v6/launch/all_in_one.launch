@@ -1,0 +1,21 @@
+<launch>
+  <arg name="config" default="$(find zhihang_adaptive_search_v6)/config/adaptive_search.yaml"/>
+  <arg name="scene_id" default="scene_001_adaptive_v6_7_19"/>
+  <arg name="random_seed" default="-1"/>
+  <arg name="validation_truth_relay" default="true"/>
+  <rosparam command="load" file="$(arg config)" ns="zhihang_search_v6"/>
+  <param name="/zhihang_search_v6/mission/scene_id" value="$(arg scene_id)"/>
+  <param name="/zhihang_search_v6/mission/random_seed" value="$(arg random_seed)"/>
+
+  <node pkg="zhihang_adaptive_search_v6" type="mission_manager.py" name="mission_manager_v6" output="screen"/>
+  <group ns="">
+    <node pkg="zhihang_adaptive_search_v6" type="vehicle_flight_agent.py" name="vehicle_flight_agent_v0" output="screen"><param name="vehicle_id" value="0"/></node>
+    <node pkg="zhihang_adaptive_search_v6" type="vehicle_perception_agent.py" name="vehicle_perception_agent_v0" output="screen"><param name="vehicle_id" value="0"/><param name="yolo_host" value="127.0.0.1"/><param name="yolo_port" value="17771"/></node>
+    <node pkg="zhihang_adaptive_search_v6" type="vehicle_flight_agent.py" name="vehicle_flight_agent_v1" output="screen"><param name="vehicle_id" value="1"/></node>
+    <node pkg="zhihang_adaptive_search_v6" type="vehicle_perception_agent.py" name="vehicle_perception_agent_v1" output="screen"><param name="vehicle_id" value="1"/><param name="yolo_host" value="127.0.0.1"/><param name="yolo_port" value="17772"/></node>
+    <node pkg="zhihang_adaptive_search_v6" type="vehicle_flight_agent.py" name="vehicle_flight_agent_v2" output="screen"><param name="vehicle_id" value="2"/></node>
+    <node pkg="zhihang_adaptive_search_v6" type="vehicle_perception_agent.py" name="vehicle_perception_agent_v2" output="screen"><param name="vehicle_id" value="2"/><param name="yolo_host" value="127.0.0.1"/><param name="yolo_port" value="17773"/></node>
+  </group>
+  <node if="$(arg validation_truth_relay)" pkg="zhihang_adaptive_search_v6" type="validation_target_state_relay.py" name="validation_target_state_relay_v6" output="screen"/>
+  <node unless="$(arg validation_truth_relay)" pkg="zhihang_adaptive_search_v6" type="vision_target_state_estimator.py" name="vision_target_state_estimator_v6" output="screen"/>
+</launch>

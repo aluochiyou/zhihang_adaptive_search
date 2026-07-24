@@ -1,0 +1,18 @@
+<launch>
+  <arg name="config" default="$(find zhihang_adaptive_search_v6)/config/adaptive_search.yaml"/>
+  <arg name="scene_id" default="scene_001_adaptive_v6_7_19"/>
+  <arg name="random_seed" default="-1"/>
+  <arg name="validation_truth_relay" default="true"/>
+  <arg name="plan_only" default="false"/>
+  <rosparam command="load" file="$(arg config)" ns="zhihang_search_v6"/>
+  <param name="/zhihang_search_v6/mission/scene_id" value="$(arg scene_id)"/>
+  <param name="/zhihang_search_v6/mission/random_seed" value="$(arg random_seed)"/>
+  <param name="/zhihang_search_v6/mission/plan_only" value="$(arg plan_only)"/>
+  <node pkg="zhihang_adaptive_search_v6" type="mission_manager.py" name="mission_manager_v6" output="screen">
+    <param name="plan_only" value="$(arg plan_only)"/>
+  </node>
+  <node pkg="zhihang_adaptive_search_v6" type="competition_result_publisher.py"
+        name="competition_result_publisher_v6" output="screen"/>
+  <node if="$(arg validation_truth_relay)" pkg="zhihang_adaptive_search_v6" type="validation_target_state_relay.py" name="validation_target_state_relay_v6" output="screen"/>
+  <node unless="$(arg validation_truth_relay)" pkg="zhihang_adaptive_search_v6" type="vision_target_state_estimator.py" name="vision_target_state_estimator_v6" output="screen"/>
+</launch>

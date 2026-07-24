@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "mission_id": "scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793",
+  "header_timestamp_ns": 4288379000000,
+  "static_topic": "/zhihang2026/static_targets/pose",
+  "dynamic_topic": "/zhihang2026/dynamic_targets/pose",
+  "static_entries": [],
+  "dynamic_entries": [
+    {
+      "timestamp_ns": 2657473000000,
+      "model_name": "suv_camo",
+      "endpoint": "start",
+      "x": 599.7649865092625,
+      "y": -2.8898706210346234,
+      "confidence": 0.7293294270833334
+    },
+    {
+      "timestamp_ns": 3378416000000,
+      "model_name": "suv_camo",
+      "endpoint": "end",
+      "x": 597.6023315277708,
+      "y": -0.7898907221876947,
+      "confidence": 0.6841517857142857
+    },
+    {
+      "timestamp_ns": 3411615000000,
+      "model_name": "person_red",
+      "endpoint": "start",
+      "x": 1414.280923165077,
+      "y": -0.27372507165576937,
+      "confidence": 0.7144775390625
+    },
+    {
+      "timestamp_ns": 3661483000000,
+      "model_name": "person_red",
+      "endpoint": "end",
+      "x": 1414.559948512179,
+      "y": -0.4282209708920302,
+      "confidence": 0.69158935546875
+    }
+  ],
+  "static_model_name_rule": "category_static_target",
+  "dynamic_model_name_rule": "model_name_start_and_end",
+  "source": "formal_yolo_finalized_results",
+  "truth_used_for_planning_or_output": false,
+  "run_dir": "/home/uav/zhihang_search_runs_v6/scene_001_adaptive_v6_7_19_formal_20260724_114834_seed1817124793"
+}

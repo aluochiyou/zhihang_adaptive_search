@@ -1,0 +1,17 @@
+<launch>
+  <arg name="config" default="$(find zhihang_adaptive_search_v6)/config/adaptive_search.yaml"/>
+  <arg name="vehicle_id"/>
+  <arg name="yolo_host" default="127.0.0.1"/>
+  <arg name="yolo_port"/>
+  <rosparam command="load" file="$(arg config)" ns="zhihang_search_v6"/>
+  <node pkg="zhihang_adaptive_search_v6" type="vehicle_flight_agent.py"
+        name="vehicle_flight_agent_v$(arg vehicle_id)" output="screen">
+    <param name="vehicle_id" value="$(arg vehicle_id)"/>
+  </node>
+  <node pkg="zhihang_adaptive_search_v6" type="vehicle_perception_agent.py"
+        name="vehicle_perception_agent_v$(arg vehicle_id)" output="screen">
+    <param name="vehicle_id" value="$(arg vehicle_id)"/>
+    <param name="yolo_host" value="$(arg yolo_host)"/>
+    <param name="yolo_port" value="$(arg yolo_port)"/>
+  </node>
+</launch>
